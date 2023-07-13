@@ -47,7 +47,20 @@ public class BaiTapLon {
 				dAnh = new double[n];
 				dTB = new double[n];
 				break;
-			
+			case '2':
+				dTB = tinhDTB(dToan, dVan, dAnh);
+				inDSSV(hoten, dToan, dVan, dAnh, dTB);
+				break;
+			case '3':
+				inDSSV(hoten, dToan, dVan, dAnh, dTB);
+				break;
+			case '4':
+				sapxepDSSV(hoten, dToan, dVan, dAnh, dTB);
+				inDSSV(hoten, dToan, dVan, dAnh, dTB);
+				break;
+			case '5':
+				timkiemDiem(hoten, dToan, dVan, dAnh, dTB);
+				break;
 			case 'Q':
 				break;
 			case 'q':
