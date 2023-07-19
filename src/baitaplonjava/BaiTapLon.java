@@ -3,7 +3,12 @@ package baitaplonjava;
 import java.util.Scanner;
 
 public class BaiTapLon {
-
+   static	String[] hoten ;
+   static double[] dToan;
+   static double[] dVan;
+   static double[] dAnh;
+   static double[] dTB;
+   static int n = 0;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		int n = nhapSoLuongSinhVien();
@@ -33,19 +38,18 @@ public class BaiTapLon {
 			Scanner sc = new Scanner(System.in);
 			System.out.print("Ban chon chuc nang nao: ");
 			key = sc.next().charAt(0);
-			String[] hoten;
-			double[] dToan;
-			double[] dVan;
-			double[] dAnh;
-			double[] dTB;
+			
 			switch(key) {
 			case '1': 
-				int n = nhapSoLuongSinhVien();
+				 n = nhapSoLuongSinhVien();
 				hoten = new String[n];
 				dToan = new double[n];
 				dVan = new double[n];
 				dAnh = new double[n];
 				dTB = new double[n];
+				System.out.print(n);
+
+			nhapHoTenVaDiem(hoten, dToan, dVan, dAnh);
 				break;
 			case '2':
 				dTB = tinhDTB(dToan, dVan, dAnh);
@@ -162,6 +166,7 @@ public class BaiTapLon {
 	public static void inDSSV(String[] hoten, double[] dToan, double[] dVan, double[] dAnh, double[] dTB) {
 		System.out.println("*************************************************************");
 		System.out.println("\t\t\t DANH SAH SINH VIEN");
+
 		for (int i = 0; i < hoten.length; i++) {
 			System.out.println(
 					hoten[i] + "; Toan: " + dToan[i] + "; Van: " + dVan[i] + "; Anh: " + dAnh[i] + "; DTB: " + dTB[i]);
@@ -200,6 +205,5 @@ public class BaiTapLon {
 	public static void timHoTen(String[] hoten, double[] dToan, double[] dVan, double[] dAnh, double[] dTB) {
 
 	}
-			
 }
 	
